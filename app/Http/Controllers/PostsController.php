@@ -15,7 +15,7 @@ class PostsController extends Controller
        return view('post.index',compact('posts'));
     }
 
-    public function ShowPost($id)
+    public function show($id)
     {
         $post = Post::find($id);
 
@@ -24,6 +24,16 @@ class PostsController extends Controller
            return redirect('posts');
         }
         
-        return view('post.ShowPost',compact('post'));
+        return view('post.Show',compact('post'));
+    }
+
+    public function create()
+    {
+         return view('post.create');
+    }
+
+    public function store(Request $request)
+    {
+        dd($request);
     }
 }
