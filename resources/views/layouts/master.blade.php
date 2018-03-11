@@ -11,17 +11,30 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
 
-    <link href="/css/blog.css" rel="stylesheet">
+    <link href="/css/app.css" rel="stylesheet">
 </head>
 <body>
+    
     <div class="container">
-        @include('layouts.includes.header')        
+        <!-- header -->
+            @include('layouts.includes.header')  
+        <!-- /header -->              
 
-        @include('layouts.includes.nav')
+        <!-- nav -->    
+            @include('layouts.includes.nav')
+        <!-- /nav -->
 
-        @include('layouts.includes.slideShow')
-       
-        @include('layouts.includes.display2Items')
+        <!-- nav -->
+            @include('layouts.includes.notification')
+        <!-- /nav -->
+
+        <!-- /slideShow -->  
+            @yield('slideShow')      
+        <!-- /slideShow -->
+
+        <!-- display2Items -->  
+            @yield('display2Items')      
+        <!-- /display2Items -->        
     </div>
 
     <main role="main" class="container">
